@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="roll.css">
+    <title>Accordion</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>FAQ</h1>
+        </div>
+        <div class="accord-items">
+            <div class="accord-item">
+                <h2 class="tittle">What is web development ?</h2>
+                <div class="accord-text">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni atque reprehenderit ea ipsum impedit necessitatibus Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum id unde voluptas, enim illum sapiente nihil incidunt necessitatibus quisquam temporibus! explicabo natus, mollitia at? Voluptatibus.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accord-item">
+                <h2 class="tittle">What is Javascript ?</h2>
+                <div class="accord-text">
+                    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni atque reprehenderit ea ipsum impedit necessitatibs.</p>
+                </div>
+            </div>
+            <div class="accord-item">
+                <h2 class="tittle">What is Cascadind Style Sheet ?</h2>
+                <div class="accord-text">
+                    <p class="content">Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores. ipsum dolor sit amet consectetur adipisicing elit. Magni atque reprehenderit ea ipsum impedit necessitatibus explicabo natus, mollitia at? Voluptatibus.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const accordHeaders = document.querySelectorAll('.tittle');
+
+        accordHeaders.forEach( accordHeader => {
+            accordHeader.addEventListener('click', ()=>{
+                accordHeader.classList.toggle('active');
+                
+                
+                const accordText = accordHeader.nextElementSibling;
+                if(accordHeader.classList.contains('active')){
+                    accordText.style.maxHeight = accordText.scrollHeight + 'px';
+                }
+                else{
+                    accordText.style.maxHeight = 0;
+                }
+            
+            })
+
+        });
+    </script>
+</body>
+</html>

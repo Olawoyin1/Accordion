@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    font-family: poppins;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url("/Poppins-Regular.ttf");
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #35424a;
+    color: #fff;
+}
+
+.container{
+
+    width: 80%;
+    margin: 4rem auto;
+}
+
+.header h1{
+    text-align: center;
+    font-weight: 700;
+}
+
+.accord-item{
+    background-color: #fff;
+    margin: 1rem 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    overflow: hidden;
+    color: #333;
+}
+
+.accord-item .tittle{
+    padding: 1rem ;
+    font-size: 18px;
+    font-family: poppins;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, transparent, #35424a, transparent)1;
+    position: relative;
+}
+
+.accord-item .tittle::after{
+    content: '\25BE';
+    transform: rotate(180deg);
+    position: absolute;
+    right: 1.2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    
+}
+
+.accord-item .tittle.active::after{
+    transform: rotate(0deg);
+}
+
+
+
+.accord-text{
+    max-height: 0;
+    transition: .5s ease-in-out;
+}
+
+.accord-text .content{
+    padding: 1rem;
+}
